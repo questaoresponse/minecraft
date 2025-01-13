@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /minecraft
 
 # Baixe o servidor Minecraft Bedrock
-RUN curl -L https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.51.02.zip -o bedrock-server.zip
+RUN wget --no-check-certificate https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.51.02.zip -O bedrock-server.zip
 
 # Descompactar o arquivo .zip
 RUN unzip bedrock-server.zip && rm bedrock-server.zip
