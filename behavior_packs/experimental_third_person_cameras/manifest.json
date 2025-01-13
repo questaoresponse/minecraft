@@ -1,0 +1,30 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Third person experimental cameras behavior pack",
+        "name": "experimental cameras boom",
+        "uuid": "a868eca8-d61d-43e0-a96a-07234ccadf72",
+        "version": [
+            0,
+            0,
+            1
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "Third person experimental cameras behavior pack",
+            "type": "data",
+            "uuid": "748595e8-971d-4825-8350-33ab910e43d8",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        }
+    ]
+}

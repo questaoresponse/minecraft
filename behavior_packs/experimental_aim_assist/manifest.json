@@ -1,0 +1,19 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Experimental aim assist behavior pack",
+    "name": "experimental aim assist",
+    "uuid":"83b09e7f-30ac-4d9a-addd-8905db003528",
+    "version": [0, 0, 1],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules":
+    [
+      {
+        "description": "Experimental aim assist behavior pack",
+          "type": "data",
+          "uuid": "f77323d6-34e6-4b9e-9a34-b15de6e670a3",
+          "version": [0, 0, 1]
+      }
+    ]
+}

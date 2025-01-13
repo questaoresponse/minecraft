@@ -1,0 +1,9 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:camera_preset": {
+    "identifier": "minecraft:third_person",
+    "aim_assist": {
+      "preset": "minecraft:aim_assist_default"
+    }
+  }
+}
