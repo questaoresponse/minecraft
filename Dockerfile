@@ -11,10 +11,10 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /minecraft
 
 # Baixe o servidor Minecraft Bedrock
-RUN wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.19.70.02.tar.gz -O bedrock-server.tar.gz
+RUN wget https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.51.02.zip -O bedrock-server.zip
 
-# Extraia o arquivo do servidor
-RUN tar -zxvf bedrock-server.tar.gz
+# Descompactar o arquivo .zip
+RUN unzip bedrock-server.zip && rm bedrock-server.zip
 
 # Exponha a porta 19132 para conexões de clientes
 EXPOSE 19132/udp
