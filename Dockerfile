@@ -30,4 +30,4 @@ EXPOSE 19132/udp
 
 RUN chmod +x ./bedrock_server
 # Comando para rodar o servidor
-CMD ["./bedrock_server"]
+CMD ["./minecraft/bedrock_server"]
