@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y unzip
 # Copiar o executável da máquina local para a imagem
 COPY bedrock-server.zip /minecraft
 # Descompactar o arquivo .zip
-RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip \ && rm bedrock-server.zip
+RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d / && rm bedrock-server.zip
 
 # Exponha a porta 19132 para conexões de clientes
 EXPOSE 19132/udp
