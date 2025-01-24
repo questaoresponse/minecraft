@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     unzip \
     libstdc++6 \
+    libcurl4-openssl-dev \
     && apt-get clean
 
 # # Instale dependências básicas
@@ -18,7 +19,7 @@ WORKDIR /minecraft
 
 # Baixe o servidor Minecraft Bedrock
 # RUN wget --no-check-certificate https://www.minecraft.net/bedrockdedicatedserver/bin-linux/bedrock-server-1.21.51.02.zip -O bedrock-server.zip
-RUN apt-get update && apt-get install -y unzip
+# RUN apt-get update && apt-get install -y unzip
 
 # Copiar o executável da máquina local para a imagem
 COPY bedrock-server.zip /minecraft
@@ -29,6 +30,5 @@ RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./minecraft && rm
 EXPOSE 19132/udp
 
 RUN chmod +x ./minecraft/bedrock_server
-CMD ["ls -l ./"]
 # Comando para rodar o servidor
 CMD ["./minecraft/bedrock_server"]
