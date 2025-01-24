@@ -24,11 +24,11 @@ WORKDIR /minecraft
 # Copiar o executável da máquina local para a imagem
 COPY bedrock-server.zip /minecraft
 # Descompactar o arquivo .zip
-RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./minecraft && rm bedrock-server.zip
+RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./ && rm bedrock-server.zip
 
 # Exponha a porta 19132 para conexões de clientes
 EXPOSE 19132/udp
 
-RUN chmod +x ./minecraft/bedrock_server
+RUN chmod +x ./bedrock_server
 # Comando para rodar o servidor
-CMD ["./minecraft/bedrock_server"]
+CMD ["./bedrock_server"]
