@@ -28,6 +28,6 @@ RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d /minecraft && rm 
 # Exponha a porta 19132 para conexões de clientes
 EXPOSE 19132/udp
 
-RUN chmod +x ./bedrock_server
+RUN chmod +x ./minecraft/bedrock_server
 # Comando para rodar o servidor
 CMD ["./minecraft/bedrock_server"]
