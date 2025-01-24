@@ -23,7 +23,7 @@ WORKDIR /minecraft
 
 # Copiar o executável da máquina local para a imagem
 COPY bedrock-server.zip /minecraft
-COPY server.properties /app/
+COPY server.properties /minecraft
 # Descompactar o arquivo .zip
 RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./server && rm bedrock-server.zip
 RUN mv ./server.properties ./server/server.properties
