@@ -29,5 +29,6 @@ RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./minecraft && rm
 EXPOSE 19132/udp
 
 RUN chmod +x ./minecraft/bedrock_server
+CMD ["ls -l ./"]
 # Comando para rodar o servidor
 CMD ["./minecraft/bedrock_server"]
