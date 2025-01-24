@@ -28,7 +28,7 @@ COPY server.properties /minecraft
 RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./server && rm bedrock-server.zip
 RUN mv ./server.properties ./server/server.properties
 # Exponha a porta 443 para conexões de clientes
-EXPOSE 443/udp
+EXPOSE 80/udp
 
 WORKDIR /minecraft/server
 
