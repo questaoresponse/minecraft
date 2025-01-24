@@ -27,9 +27,11 @@ COPY server.properties /minecraft
 # Descompactar o arquivo .zip
 RUN chmod +r bedrock-server.zip && unzip bedrock-server.zip -d ./server && rm bedrock-server.zip
 RUN mv ./server.properties ./server/server.properties
-# Exponha a porta 19132 para conexões de clientes
-EXPOSE 19132/udp
+# Exponha a porta 443 para conexões de clientes
+EXPOSE 443/udp
 
-RUN chmod +x ./server/bedrock_server
+WORKDIR /minecraft/server
+
+RUN chmod +x ./bedrock_server
 # Comando para rodar o servidor
-CMD ["./server/bedrock_server"]
+CMD ["./bedrock_server"]
